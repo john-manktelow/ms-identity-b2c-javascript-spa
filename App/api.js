@@ -4,7 +4,7 @@ function callApi(endpoint, token) {
     const bearer = `Bearer ${token}`;
   
     headers.append("Authorization", bearer);
-  
+    
     const options = {
         method: "GET",
         headers: headers
@@ -17,7 +17,7 @@ function callApi(endpoint, token) {
       .then(response => {
 
         if (response) {
-          logMessage('Web API responded: ' + response.name);
+          logMessage('Web API responded: ' + response.userId);
         }
         
         return response;
